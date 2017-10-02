@@ -4,8 +4,14 @@
     <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
-    <div id="root">
+    <div id="hello">
       {{ hello }}
+    </div>
+    <div id="title" v-bind:title="title">
+      Hover for title
+    </div>
+    <div id="conditional">
+      <span v-if="conditional">Visible if true</span>
     </div>
   </body>
   <script src="vue.js"></script>

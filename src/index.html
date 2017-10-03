@@ -3,16 +3,44 @@
     <title>Vue.js</title>
     <script src="https://unpkg.com/vue"></script>
   </head>
+
   <body>
-    <div id="hello">
-      {{ hello }}
+
+    <div id="app">
+      {{ message }}
     </div>
-    <div id="title" v-bind:title="title">
-      Hover for title
+
+    <div id="app2">
+      <span v-bind:title="message">
+        Hover to see when you loaded the page!
+      </span>
     </div>
-    <div id="conditional">
-      <span v-if="conditional">Visible if true</span>
+
+    <div id="app3">
+      <span v-if="bool">
+        Visible if true
+      </span>
     </div>
+
+    <div id="app4">
+      <ol>
+        <li v-for="todo in todos">
+          {{ todo.text }}
+        </li>
+      </ol>
+    </div>
+
+    <div id="app5">
+      <p>{{ message }}</p>
+      <button v-on:click="reverseMessage">Reverse</button>
+    </div>
+
+    <div id="app6">
+      <p>{{ message }}</p>
+      <input v-model="message">
+    </div>
+
   </body>
   <script src="vue.js"></script>
+
 </html>

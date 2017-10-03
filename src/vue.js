@@ -1,20 +1,50 @@
-const hello = new Vue({
-  el: '#hello',
+const app = new Vue({
+  el: '#app',
   data: {
-    hello: 'Hello World!'
+    message: 'Hello Vue!'
+  }
+});
+
+const app2 = new Vue({
+  el: '#app2',
+  data: {
+    message: `You loaded this page on ${new Date().toLocaleString()}`
+  }
+});
+
+const app3 = new Vue({
+  el: '#app3',
+  data: {
+    bool: true
+  }
+});
+
+const app4 = new Vue({
+  el: '#app4',
+  data: {
+    todos: [
+      { text: 'Learn JavaScript' },
+      { text: 'Learn Vue' },
+      { text: 'Build something awesome' }
+    ]
+  }
+});
+
+const app5 = new Vue({
+  el: '#app5',
+  data: {
+    message: 'Hello Vue.js!'
+  },
+  methods: {
+    reverseMessage: function () {
+      this.message = this.message.split('').reverse().join('')
+    }
   }
 })
 
-const title = new Vue({
-  el: '#title',
+const app6 = new Vue({
+  el: '#app6',
   data: {
-    title: new Date()
-  }
-})
-
-const conditional = new Vue({
-  el: '#conditional',
-  data: {
-    conditional: true
+    message: 'Hello Vue!'
   }
 })

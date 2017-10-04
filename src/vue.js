@@ -76,3 +76,15 @@ const app8 = new Vue({
     }
   }
 });
+
+const app9 = new Vue({
+  el: '#app9',
+  data: {
+    message: 'Hello'
+  },
+  computed: {
+    reversed: function () {
+      return this.message.split('').reverse().join('');
+    }
+  }
+});

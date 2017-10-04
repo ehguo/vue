@@ -37,7 +37,7 @@ const app5 = new Vue({
   },
   methods: {
     reverseMessage: function () {
-      this.message = this.message.split('').reverse().join('')
+      this.message = this.message.split('').reverse().join('');
     }
   }
 });
@@ -62,5 +62,17 @@ const app7 = new Vue({
       { id: 1, text: 'Bread' },
       { id: 2, text: 'Cheese' }
     ]
+  }
+});
+
+const app8 = new Vue({
+  el: '#app8',
+  data: {
+    disabled: true
+  },
+  methods: {
+    disableButton: function () {
+      this.disabled = !this.disabled;
+    }
   }
 });

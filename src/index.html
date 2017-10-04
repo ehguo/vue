@@ -50,6 +50,11 @@
       </ol>
     </div>
 
+    <div id="app8">
+      <button @click="disableButton" :disabled="disabled">One</button>
+      <button @click="disableButton" :disabled="!disabled">Two</button>
+    </div>
+
   </body>
   <script src="vue.js"></script>
 

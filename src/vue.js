@@ -88,3 +88,20 @@ const app9 = new Vue({
     }
   }
 });
+
+const app10 = new Vue({
+  el: '#app10',
+  data: {
+    firstName: 'Foo',
+    lastName: 'Bar',
+    fullName: 'Foo Bar'
+  },
+  watch: {
+    firstName: function (val) {
+      this.fullName = `${val} ${this.lastName}`;
+    },
+    lastName: function (val) {
+      this.fullName = `${this.firstName} ${val}`;
+    }
+  }
+})
